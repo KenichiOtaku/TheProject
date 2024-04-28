@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Sheet</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="character-sheet">
+    <div id="settingsPanel">
+        <h3>Theme Customisation</h3>
+        <label for="themeColor">Theme Color:</label>
+        <input type="color" id="themeColor">
+    </div>
+    <div class="section">
+        <h2>Character Level and Experience Points</h2>
+        <div class="level">
+            <label for="charLevel">Level:</label>
+            <input type="number" id="charLevel" min="1" value="1">
+        </div>
+        <div class="experience">
+            <label for="charXP">Experience Points:</label>
+            <input type="number" id="charXP" min="0" value="0">
+        </div>
+        <div class="level-progress" id="levelProgress"></div>
+    </div>
+    <div class="section">
+        <h2>Character Info</h2>
+        <div class="info">
+            <label for="charName">Character Name:</label>
+            <input type="text" id="charName">
+            <label for="className">Character Class:</label>
+            <select id="className" name="Class">
+                <option value="1">Barbarian</option>
+                <option value="2">Bard</option>
+                <option value="3">Cleric</option>
+                <option value="4">Druid</option>
+                <option value="5">Fighter</option>
+                <option value="6">Monk</option>
+                <option value="7">Paladin</option>
+                <option value="8">Ranger</option>
+                <option value="9">Rogue</option>
+                <option value="10">Sorcerer</option>
+                <option value="11">Warlock</option>
+                <option value="12">Wizard</option>
+                <option value="13">Artificer</option>
+                <option value="14">Blood Hunter</option>
+            </select>
+            <label for="charRace">Character Race:</label>
+            <select id="charRace" name="Race">
+                <option value="1">Arakocra</option>
+                <option value="2">Dragonborn</option>
+                <option value="3">Hill Dwarf</option>
+                <option value="4">Mountain Dwarf</option>
+                <option value="5">High Elf</option>
+                <option value="6">Wood Elf</option>
+                <option value="7">Eldarin Elf</option>
+                <option value="8">Air Genasi</option>
+                <option value="9">Earth Genasi</option>
+                <option value="10">Fire Genasi</option>
+                <option value="11">Water Genasi</option>
+                <option value="12">Rock Gnome</option>
+                <option value="13">Deep Gnome</option>
+                <option value="14">Goliath</option>
+                <option value="15">Half-Elf</option>
+                <option value="16">Half-Orc</option>
+                <option value="17">Lightfoot Halfling</option>
+                <option value="18">Stout Halfling</option>
+                <option value="19">Human</option>
+                <option value="20">Tiefling</option>
+                <option value="21">Aasimar</option>
+
+            </select>
+
+            <div>
+            <label for="armourClass">Armour Class:</label>
+            <input type="text" id="armourClass" readonly>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Abilities</h2>
+        <div class="abilities">
+            <div class="ability">
+                <label for="strength">Strength:</label>
+                <input type="number" id="strength" name="Strength" min="1" max="20" value="1">
+                <span class="error" id="strengthError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability">
+                <label for="constitution">Constitution:</label>
+                <input type="number" id="constitution" name="Constitution" min="1" max="20" value="1">
+                <span class="error" id="constitutionError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability">
+                <label for="dexterity">Dexterity:</label>
+                <input type="number" id="dexterity" name="Dexterity" min="1" max="20" value="1">
+                <span class="error" id="dexterityError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability">
+                <label for="intelligence">Intelligence:</label>
+                <input type="number" id="intelligence" name="Intelligence" min="1" max="20" value="1">
+                <span class="error" id="intelligenceError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability">
+                <label for="wisdom">Wisdom:</label>
+                <input type="number" id="wisdom" name="Wisdom" min="1" max="20" value="1">
+                <span class="error" id="wisdomError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability">
+                <label for="charisma">Charisma:</label>
+                <input type="number" id="charisma" name="Charisma" min="1" max="20" value="1">
+                <span class="error" id="charismaError"></span>
+                <span class="ability-feedback"></span>
+            </div>
+            <div class="ability-feedback"></div>
+        </div>
+        </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills"></div>
+    </div>
+    <div class="section">
+        <h2>Inventory</h2>
+        <div class="inventory"></div>
+    </div>
+    <div class="section">
+        <h2>Spells</h2>
+        <div class="spells"></div>
+    </div>
+<div class="section">
+        <h2>Character Features</h2>
+        <div class="features">
+        </div>
+    </div>
+
+<div class="section">
+    <h2>Dice</h2>
+        <button id="rollD20Button">Roll D20</button>
+        <h2 id="d20Result"></h2>
+        <button id="rollD12Button">Roll D12</button>
+        <h2 id="d12Result"></h2>
+        <button id="rollD10Button">Roll D10</button>
+        <h2 id="d10Result"></h2>
+        <button id="rollD8Button">Roll D8</button>
+        <h2 id="d8Result"></h2>
+        <button id="rollD6Button">Roll D6</button>
+        <h2 id="d6Result"></h2>
+        <button id="rollD4Button">Roll D4</button>
+        <h2 id="d4Result"></h2>
+</div>
+
+    <button id="saveButton">Character Save</button>
+    <button id="loadButton">Character Load</button>
+    <button id="printButton">Print</button>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

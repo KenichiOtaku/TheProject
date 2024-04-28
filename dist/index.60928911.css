@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #007bff;
+}
+
+@media screen and (width <= 600px) {
+  .section {
+    width: 100%;
+    max-width: none;
+  }
+
+  .ability {
+    flex: 100%;
+  }
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.character-sheet {
+  background-color: #5d50d2;
+  border: 4px solid #fff;
+  border-radius: 20px;
+  max-width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.section {
+  background-color: var(--primary-color);
+  color: #6bbb4b;
+  border: 7px solid #5299f6;
+  border-radius: 50px;
+  width: 90%;
+  max-width: 90%;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.abilities {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.ability {
+  flex: 50%;
+  padding: 10px;
+}
+
+.ability-feedback {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.info label {
+  font-weight: bold;
+}
+
+.info input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 200px;
+  padding: 5px;
+}
+
+button {
+  color: #3ea2bd;
+  background-color: #5b348a;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-flex;
+}
+
+button:active {
+  color: #5b348a;
+  background-color: #3ea2bd;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.d20Result {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index.60928911.css.map */
